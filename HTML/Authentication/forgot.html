@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password</title>
+    <link rel="icon" href="/IMAGES/lightlogo.png" type="image/png" />
+    <link rel="stylesheet" href="/CSS/authentication.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="/IMAGES/lightlogo.png" alt="CrisTatePro Logo" class="logo" />
+      <h1>Reset Password</h1>
+
+      <div id="loading-overlay" class="loading-overlay" style="display: none">
+        <div>
+          <span id="loading-message">Checking email...</span>
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+      <div class="alert-message" id="alert-message" style="display: none"></div>
+
+      <div id="email-verification" class="form-section">
+        <h2>Welcome back!</h2>
+        <p>
+          If you’ve forgotten your password, don’t worry—we’re here to help.
+          Please enter your email address below, and we’ll assist you in
+          resetting your password.
+        </p>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+        <button id="verify-email-btn">Verify Email</button>
+        <button id="back-to-login-btn" style="margin-top: 10px">
+          Back to Login
+        </button>
+      </div>
+
+      <!-- Phone Verification Section -->
+      <div id="phone-verification" class="form-section" style="display: none">
+        <h2>
+          Hello <span id="first-name"></span> <span id="last-name"></span>,
+          complete your phone number:
+        </h2>
+        <p id="masked-phone"></p>
+        <input
+          type="text"
+          id="phone-number"
+          placeholder="Complete phone number"
+          required
+        />
+        <button id="verify-phone-btn">Verify Phone Number</button>
+        <button id="back-to-login-phone-btn" style="margin-top: 10px">
+          Back to Login
+        </button>
+      </div>
+
+      <!-- Password Reset Section -->
+      <div id="password-reset" class="form-section" style="display: none">
+        <h2>Change Your Password</h2>
+        <div class="password-container">
+          <input
+            type="password"
+            id="new-password"
+            placeholder="Enter New Password"
+            required
+          />
+          <span
+            class="toggle-password"
+            onclick="togglePassword('new-password', this)"
+            >👁️</span
+          >
+        </div>
+        <div class="password-container">
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="Confirm New Password"
+            required
+          />
+          <span
+            class="toggle-password"
+            onclick="togglePassword('confirm-password', this) "
+            >👁️</span
+          >
+        </div>
+        <button id="reset-password-btn">Reset Password</button>
+        <button id="back-to-login-reset-btn" style="margin-top: 10px">
+          Back to Login
+        </button>
+      </div>
+
+      <!-- Success Message Section -->
+      <div id="success-message" class="form-section" style="display: none">
+        <h2>Awesome, <span id="success-first-name"></span>! 🎉</h2>
+        <p>
+          Your password has been successfully changed. You’ll be redirected to
+          the sign-in screen in <span id="countdown">15</span> seconds.
+        </p>
+      </div>
+    </div>
+
+    <script src="/JS/api.js"></script>
+    <script src="/JS/forgotpass.js"></script>
+  </body>
+</html>

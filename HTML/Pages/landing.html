@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="CrisTatePro - Unleashing real estate brilliance! Your trusted partner for rental properties."
+    />
+    <meta
+      name="keywords"
+      content="real estate, rental properties, property search, CrisTatePro"
+    />
+    <meta name="author" content="CrisTatePro Team" />
+    <title>CrisTatePro - Unleashing Real Estate Brilliance!</title>
+    <link rel="icon" href="/IMAGES/lightlogo.png" type="image/png" />
+    <link rel="stylesheet" href="/CSS/landing.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body onload="updateGreeting()">
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <h1 class="logo">CrisTatePro</h1>
+        <div class="user-info">
+          <img
+            src="/IMAGES/logo.png"
+            alt="Profile"
+            class="avatar"
+            id="profile-avatar"
+          />
+          <span id="greeting">Hello, User 😊</span>
+          <div class="mobile-menu-icon" id="mobile-menu-icon">
+            <span class="material-icons" id="menu-icon">menu</span>
+          </div>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="#" onclick="scrollToFeatures(event)">Features</a></li>
+            <li><a href="houselist.html">Listings</a></li>
+            <li><a href="favouritehouse.html">Favourites</a></li>
+            <li>
+              <a
+                href="#"
+                onclick="checkLoginAndRedirect(event, '/HTML/Features/inbox.html')"
+                >Chats</a
+              >
+            </li>
+
+            <li><a href="aboutus.html">About Us</a></li>
+            <li>
+              <a
+                href="/HTML/Authentication/profile.html"
+                class="login-btn"
+                id="profile-btn"
+                >Profile</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h2>Unlock Your Dream Rental Property</h2>
+        <p>
+          Experience the ease of finding your perfect home with CrisTatePro.
+          Discover premium listings and connect directly with landlords.
+        </p>
+        <div class="button-group" id="get-started-group">
+          <a href="#" class="cta-btn primary">Get Started</a>
+          <a href="#" class="cta-btn secondary">Explore Listings</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="featured-properties" id="features">
+      <div class="container">
+        <h2 class="section-title">Featured Properties</h2>
+        <div class="property-list" id="property-list"></div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 CrisTatePro | Powered by CrisTatePro Ltd Company</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/JS/landing.js"></script>
+  </body>
+</html>

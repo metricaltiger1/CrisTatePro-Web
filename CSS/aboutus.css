@@ -1,0 +1,236 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f9f9f9;
+
+  user-select: none;
+}
+
+h1, h2 {
+  color: #2C3E50; /* Navy Blue */
+}
+
+h3 {
+  color: #E67E22; /* Sunset Orange */
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #777;
+  font-weight: 300;
+}
+
+/* Header Styles */
+.header {
+  min-height: 10vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/IMAGES/darklogo.png);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2% 6%;
+}
+
+nav img {
+  width: 150px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links ul li {
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+/* Container */
+.container {
+  width: 30%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Section Styles */
+.about, .facilities {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.about-col, .facilities-col {
+  flex-basis: 31%;
+  background: #fff3f3;
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: box-shadow 0.5s;
+}
+
+.about-col:hover, .facilities-col:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Call to Action */
+.cta {
+  margin: 100px auto;
+  width: 80%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/newyork.jpeg);
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.cta h1 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+/* Bottom Card */
+.bottomcard {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.bottomcard h4 {
+  margin: 20px 0 25px;
+  font-weight: 600;
+}
+
+/* Footer Styles */
+.footer {
+  background: linear-gradient(90deg, #2C3E50 0%, #E67E22 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 0;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  header p {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .about, .facilities {
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  header p {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .about, .facilities {
+    padding: 20px 0;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    position: absolute;
+    background: #f44336;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: right 1s;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  .text-box h1 {
+    font-size: 20px;
+  }
+
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+}

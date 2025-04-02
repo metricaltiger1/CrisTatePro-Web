@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - CrisTatePro</title>
+    <link rel="icon" href="/IMAGES/lightlogo.png" type="image/png" />
+    <link rel="stylesheet" href="/CSS/authentication.css" />
+  </head>
+  <body>
+    <div class="loading-overlay" id="loading-overlay">
+      <div class="spinner"></div>
+      <p id="loading-message">Logging in, please wait...</p>
+    </div>
+
+    <div class="container">
+      <img src="/IMAGES/lightlogo.png" alt="CrisTatePro Logo" class="logo" />
+      <h1>Login</h1>
+
+      <div class="alert-container" id="alert-container">
+        <div class="alert-message" id="alert-message"></div>
+      </div>
+
+      <form id="login-form">
+        <input type="email" id="email" placeholder="Email" required />
+        <div class="password-container">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <span
+            class="toggle-password"
+            id="toggle-password"
+            onclick="togglePassword('password')"
+            >👁️</span
+          >
+        </div>
+        <button type="submit">Login</button>
+      </form>
+      <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+      <p><a href="forgot.html">Forgot Password?</a></p>
+    </div>
+
+    <script src="../../JS/api.js"></script>
+    <script src="../../JS/login.js"></script>
+  </body>
+</html>

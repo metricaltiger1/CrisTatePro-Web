@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <link rel="stylesheet" href="/CSS/profile.css" />
+  </head>
+  <body>
+    <div class="profile-container">
+      <!-- Home Icon at the top-left -->
+      <a href="/HTML/Pages/landing.html" class="home-icon" title="Home"></a>
+      <!-- Profile Picture Section -->
+      <div class="profile-picture-container">
+        <img id="profile-image" src="boy.png" alt="Profile Picture" />
+        <button id="edit-image-btn" title="Edit Profile Picture"></button>
+      </div>
+
+      <!-- User Details Section -->
+      <div class="user-details">
+        <p><strong>Name:</strong> <span id="user-name">John Doe</span></p>
+        <p>
+          <strong>Phone Number:</strong>
+          <span id="phone-number">+1234567890</span>
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <span id="user-email">johndoe@example.com</span>
+        </p>
+      </div>
+
+      <!-- Edit Info Icon at the top-right -->
+      <div
+        class="edit-info-icon"
+        id="edit-info-btn"
+        title="Edit Information"
+      ></div>
+
+      <!-- Edit Info Section (Hidden by Default) -->
+      <div id="edit-info-section" class="hidden">
+        <form id="edit-info-form">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" />
+
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" />
+
+          <label for="phone-number-edit">Phone Number</label>
+          <input type="text" id="phone-number-edit" name="phone-number" />
+
+          <div class="button-group">
+            <button id="save-info-btn" class="action-btn">Save Info</button>
+            <button id="cancel-info-btn" class="action-btn cancel-btn">
+              Cancel
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Edit Image Section (Hidden by Default) -->
+      <div id="edit-image-section" class="hidden">
+        <label for="image-upload">Upload New Profile Image</label>
+        <input type="file" id="image-upload" accept="image/*" />
+        <img
+          id="profile-image-preview"
+          src="/IMAGES/darklogo.png"
+          alt="Profile Image Preview"
+        />
+        <div class="button-group">
+          <button id="remove-image" class="action-btn">Remove Image</button>
+          <button id="save-image-btn" class="action-btn">Save Image</button>
+          <button id="cancel-image-btn" class="action-btn cancel-btn">
+            Cancel
+          </button>
+        </div>
+      </div>
+
+      <!-- Fullscreen Modal for Profile Picture -->
+      <div id="fullscreen-modal" class="fullscreen-modal">
+        <img id="fullscreen-image" src="" alt="Fullscreen Profile Image" />
+        <button class="btn btn-close" onclick="closeFullScreen()">Close</button>
+      </div>
+
+      <!-- Logout Button -->
+      <!-- Logout Button -->
+      <a
+        href="/HTML/Authentication/login.html"
+        id="logout"
+        class="btn btn-logout"
+        >Logout</a
+      >
+    </div>
+    <script src="/JS/profile.js"></script>
+    <script src="/JS/api.js"></script>
+  </body>
+</html>

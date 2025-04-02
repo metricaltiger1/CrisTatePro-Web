@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>House Details</title>
+    <link rel="icon" href="/IMAGES/lightlogo.png" type="image/png">
+    <link rel="stylesheet" href="/CSS/stl.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <button id="back-btn">Back</button>
+        
+        <!-- House Details Section -->
+        <div id="house-detail" class="house-detail">
+            <h2>House Title</h2>
+            <p><strong>Amenities:</strong> <div id="amenity-container" class="amenity-container"></div></p>
+        </div>
+    </div>
+
+    <script src="/JS/api.js"></script>
+    <script type="module" src="/JS/housedetail.js"></script>
+</body>
+</html>

@@ -1,0 +1,241 @@
+/* General Styles */
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f4f8;
+    color: #2C3E50;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    user-select: none;
+}
+
+/* Header & Footer */
+header, footer {
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(90deg, #2C3E50 0%, #E67E22 100%);
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* House Detail Container */
+#house-detail {
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+}
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%; 
+    max-width: 600px;
+    margin: auto; 
+    margin-bottom: 20px;
+    /*box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);*/
+    border-radius: 8px; 
+    overflow: hidden; 
+}
+
+
+.house-info-wrapper, .carousel {
+    height: 400px; 
+}
+
+.carousel-images {
+    margin-top: 40px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.carousel-images img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; 
+    display: none;
+}
+
+.carousel-images img.active {
+    display: block;
+}
+
+/* Carousel Buttons */
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#prev-button {
+    left: 10px;
+}
+
+#next-button {
+    right: 10px;
+}
+
+/* Image Indicator */
+.image-indicator {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 24px;
+    color: #E67E22;
+}
+
+/* House Info Section */
+#house-info {
+    text-align: left;
+    padding: 20px;
+    height: 100%; 
+}
+
+#house-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #34495E;
+}
+
+#house-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    #house-detail {
+        flex-direction: row; 
+    }
+    .carousel {
+        width: 50%;
+        margin-right: 20px; 
+        margin-bottom: 0; 
+    }
+    #house-info {
+        width: 50%; 
+    }
+
+
+    .carousel {
+        width: 100%; 
+        margin: 0; 
+    }
+
+    #house-info {
+        width: 100%; 
+        padding: 20px 10px; 
+    }
+
+    /*  font sizes for mobile */
+    #house-info h2 {
+        font-size: 24px; 
+    }
+
+    #house-info p {
+        font-size: 16px;
+    }
+
+    /*  the exit btn for mobile */
+    #exit-full-screen {
+        font-size: 18px;
+        padding: 8px 12px; 
+        top: 15px; 
+        right: 15px; 
+    }
+}
+
+/* Full-Screen Carousel Styles */
+.full-screen-carousel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.current-full-image {
+    width: 90%; 
+    max-height: 90%; 
+    object-fit: contain; 
+}
+
+/* Full-Screen Container for Image and Exit Button */
+.full-screen-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Exit Full-Screen Button */
+#exit-full-screen {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 10;
+}
+
+/* Navigation button styles for the full-screen view */
+#prev-full-image,
+#next-full-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+#prev-full-image {
+    left: 20px;
+}
+
+#next-full-image {
+    right: 20px;
+}
+
+/* Hover effects for navigation buttons */
+#prev-full-image:hover,
+#next-full-image:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}

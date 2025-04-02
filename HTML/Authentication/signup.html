@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up - CrisTatePro</title>
+    <link rel="icon" href="/IMAGES/lightlogo.png" type="image/png" />
+    <link rel="stylesheet" href="/CSS/authentication.css" />
+  </head>
+  <body>
+    <div class="loading-overlay" id="loading-overlay">
+      <div class="spinner"></div>
+      <p id="loading-message">Signing up, please wait...</p>
+    </div>
+
+    <div class="container">
+      <img src="/IMAGES/lightlogo.png" alt="CrisTatePro Logo" class="logo" />
+      <h1>Sign Up</h1>
+
+      <div class="alert-container" id="alert-container">
+        <div class="alert-message" id="alert-message"></div>
+      </div>
+
+      <form id="signup-form">
+        <input type="text" id="first-name" placeholder="First Name" required />
+        <input type="text" id="last-name" placeholder="Last Name" required />
+        <input type="text" id="phone" placeholder="Phone Number" required />
+        <input type="email" id="email" placeholder="Email" required />
+
+        <div class="password-container">
+          <input
+            type="password"
+            id="password"
+            placeholder="Password"
+            required
+          />
+          <span
+            class="toggle-password"
+            id="toggle-password"
+            onclick="togglePassword('password')"
+            >👁️</span
+          >
+        </div>
+
+        <div class="password-container">
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="Confirm Password"
+            required
+          />
+          <span
+            class="toggle-password"
+            id="toggle-confirm-password"
+            onclick="togglePassword('confirm-password')"
+            >👁️</span
+          >
+        </div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+
+    <script src="../../JS/api.js"></script>
+    <script src="../../JS/signup.js"></script>
+  </body>
+</html>

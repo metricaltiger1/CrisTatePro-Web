@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About CrisTatePro</title>
+    <link rel="icon" href="/IMAGES/lightlogo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="/CSS/aboutus.css" />
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <div class="container">
+          <!-- Adding the logo here -->
+          <img
+            src="/IMAGES/lightlogo.png"
+            alt="CrisTatePro Logo"
+            class="logo"
+          />
+          <p class="tagline">'Unleashing real estate brilliance!!!'</p>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul class="nav-list">
+            <li><a href="landing.html">Home</a></li>
+            <li><a href="houselist.html">Listings</a></li>
+            <li><a href="favouritehouse.html">Favourites</a></li>
+            <li>
+              <a
+                href="#"
+                onclick="checkLoginAndRedirect(event, '/HTML/Features/inbox.html')"
+                >Chats</a
+              >
+            </li>
+            <li><a href="/HTML/Authentication/profile.html">Profile</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+    </section>
+
+    <!-------about------->
+
+    <section class="about">
+      <h1>About CrisTatePro</h1>
+
+      <div class="row">
+        <div class="about-col">
+          <h3>Who We Are</h3>
+          <p>
+            CrisTatePro is a modern and innovative real estate platform designed
+            to simplify the process of searching for rental properties. Our
+            platform bridges the gap between renters and landlords by offering
+            intuitive tools and detailed property listings.
+          </p>
+        </div>
+        <div class="about-col">
+          <h3>Our Mission</h3>
+          <p>
+            To revolutionize the property rental experience by providing a
+            seamless, user-friendly platform that connects renters with their
+            ideal homes.
+          </p>
+        </div>
+        <div class="about-col">
+          <h3>Our vision</h3>
+          <p>
+            To become the leading rental property platform globally, known for
+            its innovation, user-centric design, and commitment to transforming
+            how people find and interact with rental properties.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!--------footer-------->
+
+    <section class="bottomcard">
+      <h2>Why Choose Us</h2>
+      <p>
+        Intuitive Interface<br />Comprehensive Property Profiles<br />Interactive
+        Map View<br />Personalized User Profiles<br />Advanced Search
+        Functionality
+      </p>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 CrisTatePro | Powered by CrisTatePro Ltd Company</p>
+      </div>
+    </footer>
+
+    <!--------JavaScript for toggle menu-------->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.right = "0";
+      }
+      function hideMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+
+    <script>
+      function checkLoginAndRedirect(event, targetUrl) {
+        const userId = localStorage.getItem("user_id");
+
+        if (!userId) {
+          event.preventDefault();
+
+          alert("You need to log in to access your chats.");
+        } else {
+          window.location.href = targetUrl;
+        }
+      }
+    </script>
+  </body>
+</html>
